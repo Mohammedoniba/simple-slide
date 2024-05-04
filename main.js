@@ -1,4 +1,6 @@
 let lastChildItem = Array.from(document.querySelectorAll('.slide_item'));
+let btnContainer = document.querySelector('.btn-container');
+let box = document.querySelector('#box-slider');
 let numS = 1;
 let scrollUp = document.querySelector('#scroll-up');
 let scrollDown = document.querySelector('#scroll-down');
@@ -24,4 +26,9 @@ window.onload = () => {
         numS === lastChildItem.length - 1 ? scrollUp.click() : scrollDown.click();
 
     }, 5000)
+    btnContainer.style.right = (window.innerWidth / 2 - window.innerWidth / 10) + "px"
 }
+window.addEventListener("resize", () => {
+    btnContainer.style.right = (window.innerWidth / 2 - window.innerWidth / 10) + "px"
+
+})
