@@ -32,3 +32,6 @@ window.addEventListener("resize", () => {
     btnContainer.style.right = (window.innerWidth / 2 - window.innerWidth / 10) + "px"
 
 })
+setInterval(() => {
+    numS === lastChildItem.length - 1 ? scrollUp.click() : scrollDown.click();
+}, 1000)
